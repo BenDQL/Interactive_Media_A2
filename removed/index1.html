@@ -1,0 +1,134 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <!-- add the font family of your choice -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Main Content Section -->
+    <div class="main-container">
+      <main class="container">
+        <!-- Media Player Section -->
+        <div class="media-player">
+          <video id="custom-video-player" controls>
+            <source
+              src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="custom-controls">
+            <div class="left-buttons">
+              <button>
+                <img
+                  id="skip-to-start"
+                  src="https://img.icons8.com/ios-glyphs/30/skip-to-start--v2.png"
+                  alt="skip-to-start--v2"
+                  width="24"
+                  height="24"
+                />
+              </button>
+              <button id="play-pause-btn" onclick="togglePlayPause()">
+                <img
+                  id="play-pause-img"
+                  src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+                  alt="Play Button"
+                  width="24"
+                  height="24"
+                />
+              </button>
+              <button onclick="endMusic()">
+                <img
+                  id="next"
+                  src="https://img.icons8.com/ios-glyphs/30/end--v2.png"
+                  alt="end--v2"
+                  width="24"
+                  height="24"
+                />
+              </button>
+              <button>
+                <img
+                  id="shuffle"
+                  src="https://img.icons8.com/ios-glyphs/30/shuffle.png"
+                  alt="shuffle"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+            <div class="progress-bar">
+              <span id="progress-bar-fill"></span>
+            </div>
+
+            <!-- add the missing buttons or functionality here -->
+            <div class="right-buttons">
+              <button onclick="volumeMute()">
+                <img
+                  id="volume-img"
+                  src="https://img.icons8.com/ios-glyphs/30/high-volume--v2.png"
+                  alt="high-volume--v2"
+                  width="24"
+                  height="24"
+                />
+              </button>
+              <button onclick="screenSize()">
+                <img
+                  id="full-screen"
+                  src="https://img.icons8.com/ios-glyphs/30/full-screen--v1.png"
+                  alt="full-screen--v1"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Content Section -->
+        <section>
+          <h2>Additional Content</h2>
+          <p>This is where you can showcase any other relevant content.</p>
+          <!-- Add more content as needed -->
+        </section>
+      </main>
+      <aside>
+        <div class="box">
+          <h3>popular</h3>
+          <div class="list">
+            <div class="imgBox">
+              <img src="sad.jpg" />
+            </div>
+            <div class="content">
+              <h2 class="rank"><small>#</small>1</h2>
+              <h4>sad</h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="list">
+            <div class="imgBox">
+              <img src="happy.jpg" />
+            </div>
+            <div class="content">
+              <h2 class="rank"><small>#</small>2</h2>
+              <h4>happy</h4>
+              <p>Artist</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+    </footer>
+  </body>
+</html>

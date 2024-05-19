@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <!-- add the font family of your choice -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Main Content Section -->
+    <main class="container">
+      <div class="video">
+        <div class="cover-wrapper">
+          <div class="media-cover"><img src="images/videoCover1.svg" /></div>
+          <div class="video-description">
+            <button class="play-btn">Play</button>
+          </div>
+        </div>
+        <div class="media-player">
+          <video id="custom-video-player" controls>
+            <source
+              src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="video-screen-close">
+            <button class="close-btn">
+              <img
+                id="close"
+                src="https://img.icons8.com/ios/50/000000/cancel.png"
+                alt="close button"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+          <div class="custom-controls">
+            <div class="left-buttons">
+              <button>
+                <img
+                  id="skip-to-start"
+                  src="https://img.icons8.com/ios-glyphs/30/skip-to-start--v2.png"
+                  alt="skip-to-start--v2"
+                  width="24"
+                  height="24"
+                />
+              </button>
+              <button id="play-pause-btn" onclick="togglePlayPause()">
+                <img
+                  id="play-pause-img"
+                  src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+                  alt="Play Button"
+                  width="24"
+                  height="24"
+                />
+              </button>
+              <button onclick="endMusic()">
+                <img
+                  id="next"
+                  src="https://img.icons8.com/ios-glyphs/30/end--v2.png"
+                  alt="end--v2"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+            <div class="progress-bar">
+              <span id="progress-bar-fill"></span>
+            </div>
+
+            <!-- add the missing buttons or functionality here -->
+            <div class="right-buttons">
+              <button onclick="volumeMute()">
+                <img
+                  id="volume-img"
+                  src="https://img.icons8.com/ios-glyphs/30/high-volume--v2.png"
+                  alt="high-volume--v2"
+                  width="24"
+                  height="24"
+                />
+              </button>
+              <button onclick="screenSize()">
+                <img
+                  id="full-screen"
+                  src="https://img.icons8.com/ios-glyphs/30/full-screen--v1.png"
+                  alt="full-screen--v1"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- PlayList Control Section -->
+    <section class="carousel">
+      <div class="playlist">
+        <div><span>Video Art 1</span></div>
+        <div><span>Video Art 2</span></div>
+        <div><span>Video Art 3</span></div>
+      </div>
+      <div class="planet"></div>
+    </section>
+  </body>
+</html>

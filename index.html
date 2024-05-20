@@ -6,6 +6,8 @@
     <!-- add the font family of your choice -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Add google fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
       rel="stylesheet"
@@ -34,10 +36,9 @@
               type="video/mp4"
             />
           </video>
-
           <div class="custom-controls">
             <div class="left-buttons">
-              <button>
+              <button onclick="playPrevVideo()">
                 <img
                   id="skip-to-start"
                   src="https://img.icons8.com/ios-glyphs/30/skip-to-start--v2.png"
@@ -55,7 +56,7 @@
                   height="24"
                 />
               </button>
-              <button onclick="endMusic()">
+              <button onclick="playNextVideo()">
                 <img
                   id="next"
                   src="https://img.icons8.com/ios-glyphs/30/end--v2.png"
@@ -106,48 +107,10 @@
       <!-- side nav box -->
       <aside>
         <div class="box">
-          <h2>Video list</h2>
-          <div class="list">
-            <div class="imgBox">
-              <img src="/images/videoCover1.svg" />
-            </div>
-            <div class="content">
-              <h2 class="rank"><small>#</small>1</h2>
-              <h3>Crafting Tutorial Video</h3>
-              <p>Artist</p>
-            </div>
-          </div>
-          <div class="list">
-            <div class="imgBox">
-              <img src="/images/videoCover3.svg" />
-            </div>
-            <div class="content">
-              <h2 class="rank"><small>#</small>2</h2>
-              <h3>Music Video</h3>
-              <p>Artist</p>
-            </div>
-          </div>
-          <div class="list">
-            <div class="imgBox">
-              <img src="/images/videoCover2.svg" />
-            </div>
-            <div class="content">
-              <h2 class="rank"><small>#</small>3</h2>
-              <h3>Video Art</h3>
-              <p>Artist</p>
-            </div>
-          </div>
+          <h2>Play list</h2>
+          <div id="playlist"></div>
         </div>
       </aside>
     </div>
-
-    <!-- Footer Section -->
-    <!-- <footer>
-      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-    </footer> -->
   </body>
 </html>

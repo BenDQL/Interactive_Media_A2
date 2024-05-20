@@ -3,7 +3,6 @@
   --text-color: hsl(0, 1%, 68%);
   --main-bg-color: #333;
   --main-text-color: #787878;
-  /* --main-btn-bg-color: #ffffff; */
 }
 
 body,
@@ -65,14 +64,15 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .logo {
-  margin-right: 20px;
-  margin-bottom: 40px;
+  margin: 20px;
+  width: 1170px;
 }
 
 .bgPhoto {
@@ -83,13 +83,15 @@ body {
   right: 0;
   display: flex;
   justify-content: flex-end;
-  overflow: hidden;
+  overflow: hidden; /* clip the image */
+  bottom: 0;
 }
 
 .bgPhoto img {
   width: 80%;
   height: auto;
   margin-right: -40%;
+  margin-bottom: -100px;
 }
 
 /* Add additional styles as needed */
@@ -98,6 +100,8 @@ body {
 .main-container {
   display: inline-flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -124,8 +128,8 @@ header {
 
 .media-player video {
   position: relative;
-  width: 800px;
-  height: auto;
+  width: 100%;
+  height: 450px;
   border-radius: 20px;
 }
 
@@ -183,6 +187,10 @@ header {
 }
 
 /* side nav style setting */
+aside {
+  flex-grow: 1;
+}
+
 .box {
   position: relative;
   min-width: 350px;
@@ -214,6 +222,10 @@ header {
   cursor: pointer;
   transition: 0.5s;
   overflow: hidden;
+}
+
+.box .list.active {
+  background: rebeccapurple;
 }
 
 .box .list:hover {
@@ -278,15 +290,36 @@ header {
   color: #333;
 }
 
-/* Footer styling */
-/* footer {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  padding: 10px 0;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-} */
+/* Responsive Design */
+@media screen and (max-width: 1169px) {
+  .logo {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .main-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .media-player video {
+    height: auto;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  aside .box {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .custom-controls {
+    width: 100%;
+    max-width: 500px;
+  }
+}

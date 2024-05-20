@@ -116,7 +116,7 @@ const generatePlaylist = () => {
     (video, index) =>
       `<div class="list">
       <div class="imgBox">
-        <img src="/images/${video.cover}.svg" />
+        <img src="images/${video.cover}.svg" />
       </div>
       <div class="content">
         <h2 class="rank">

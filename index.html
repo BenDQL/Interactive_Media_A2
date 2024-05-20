@@ -1,24 +1,32 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Player</title>
     <!-- add the font family of your choice -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="logo"><img src="/images/logo.svg" width="24" /></div>
     <!-- Main Content Section -->
-    <main class="container">
-      <div class="video">
-        <div class="cover-wrapper">
-          <div class="media-cover"><img src="images/videoCover1.svg" /></div>
-          <div class="video-description">
-            <button class="play-btn">Play</button>
-          </div>
-        </div>
+    <div class="bgPhoto"><img id="planetBg" src="/images/planet1.svg" /></div>
+    <div class="main-container">
+      <main class="container">
+        <!-- Media Player Section -->
         <div class="media-player">
           <video id="custom-video-player" controls>
             <source
@@ -26,17 +34,7 @@
               type="video/mp4"
             />
           </video>
-          <div class="video-screen-close">
-            <button class="close-btn">
-              <img
-                id="close"
-                src="https://img.icons8.com/ios/50/000000/cancel.png"
-                alt="close button"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
+
           <div class="custom-controls">
             <div class="left-buttons">
               <button>
@@ -94,16 +92,62 @@
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <!-- PlayList Control Section -->
-    <section class="carousel">
-      <div class="playlist">
-        <div><span>Video Art 1</span></div>
-        <div><span>Video Art 2</span></div>
-        <div><span>Video Art 3</span></div>
-      </div>
-      <div class="planet"></div>
-    </section>
+
+        <!-- Additional Content Section -->
+        <section>
+          <div class="media-cover"></div>
+          <div class="video-description">
+            <h1 id="video-name"></h1>
+            <p id="video-brief"></p>
+          </div>
+        </section>
+      </main>
+
+      <!-- side nav box -->
+      <aside>
+        <div class="box">
+          <h2>Video list</h2>
+          <div class="list">
+            <div class="imgBox">
+              <img src="/images/videoCover1.svg" />
+            </div>
+            <div class="content">
+              <h2 class="rank"><small>#</small>1</h2>
+              <h3>Crafting Tutorial Video</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="list">
+            <div class="imgBox">
+              <img src="/images/videoCover3.svg" />
+            </div>
+            <div class="content">
+              <h2 class="rank"><small>#</small>2</h2>
+              <h3>Music Video</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="list">
+            <div class="imgBox">
+              <img src="/images/videoCover2.svg" />
+            </div>
+            <div class="content">
+              <h2 class="rank"><small>#</small>3</h2>
+              <h3>Video Art</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer Section -->
+    <!-- <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+    </footer> -->
   </body>
 </html>

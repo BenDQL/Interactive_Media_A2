@@ -1,20 +1,49 @@
 :root {
   --primary-bg-color: #f4f4f4;
-  --text-color: #ececec;
+  --text-color: hsl(0, 1%, 68%);
   --main-bg-color: #333;
-  --main-text-color: #fff;
+  --main-text-color: #787878;
+  /* --main-btn-bg-color: #ffffff; */
 }
 
 body,
 h1,
-p,
+h2,
+h3 p,
 ul {
   margin: 0;
   padding: 0;
 }
 
+/* Custom Font */
+h1 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+h3 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
 body {
-  font-family: "Arial", sans-serif;
   background-image: linear-gradient(
     to right bottom,
     #4a0930,
@@ -30,76 +59,67 @@ body {
     #101830,
     #131b39
   );
-  width: 100%;
-  height: 100vh;
+  color: var(--text-color);
+  font-family: "Gentium Book Plus", serif;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.logo {
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.bgPhoto {
+  position: absolute;
+  margin-left: 80%;
+  margin-top: 30%;
+  width: 1000px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
   overflow: hidden;
+}
+
+.bgPhoto img {
+  width: 80%;
+  height: auto;
+  margin-right: -40%;
 }
 
 /* Add additional styles as needed */
 
 /* Create a container for the main content */
+.main-container {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .container {
-  max-width: 1280px;
-  width: 100%;
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video {
-  width: 60vw;
-  height: auto;
-  min-height: 324px;
   position: relative;
+  width: 800px;
 }
 
-.cover-wrapper {
-  position: absolute;
+/* Header styling */
+header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
   width: 100%;
-  height: 100%;
-}
-
-.media-cover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.media-cover img {
-  border-radius: 3%;
-  width: 100%;
-  height: auto;
-}
-
-.video-description {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 324px;
-}
-
-/* To make the close button float on the top right of the video*/
-.video-screen-close {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  justify-content: end;
-}
-
-.close-btn {
-  cursor: pointer;
 }
 
 /* Media player styling */
-
 .media-player {
   width: 100%;
+  display: ruby-text;
   margin: 0 auto;
-  visibility: hidden;
-  transition: 500ms;
 }
 
 .media-player video {
@@ -112,13 +132,12 @@ body {
 .custom-controls {
   height: 40px;
   width: 500px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   margin-top: -10px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.268);
   box-shadow: 0 10px 20px rgba(27, 26, 27, 0.446);
   border: 0.5px solid rgba(157, 137, 137, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -126,7 +145,7 @@ body {
   border-radius: 30px;
   z-index: 10;
   padding: 20px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px);
 }
 
 .custom-controls button {
@@ -163,60 +182,111 @@ body {
   transition: width 0.3s ease;
 }
 
-/* PlayList Control Section */
-.carousel {
-  position: absolute;
-  bottom: -30vw;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 500ms;
+/* side nav style setting */
+.box {
+  position: relative;
+  min-width: 350px;
+  min-height: 447.5;
+  background: rgba(83, 72, 72, 0.325);
+  box-shadow: 0 25px 45px rgba(141, 94, 111, 0.446);
+  border: 0.5px solid rgba(157, 137, 137, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  z-index: 10;
+  padding: 20px;
+  backdrop-filter: blur(10px);
 }
 
-.playlist,
-.playlist div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60vw;
-  height: 60vw;
-  max-width: 600px;
-  max-height: 600px;
-  border-radius: 50%;
-  text-align: center;
-  z-index: 1000;
-  transition: 200ms;
+.box h3 {
+  color: #efefef;
+  margin-bottom: 10px;
+  margin-top: -10px;
 }
 
-.playlist span {
-  position: absolute;
-  top: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
+.box .list {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+  background: rgba(174, 173, 174, 0.355);
+  border-radius: 10px;
+  margin: 10px 0;
   cursor: pointer;
-  transition: 200ms;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
-.playlist div:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(-60deg);
+.box .list:hover {
+  background: #fff;
+  box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+  transform: scale(1) translateX(10px) translateY(-10px);
 }
 
-.playlist div:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(0deg);
+.box .list .imgBox {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 10px;
 }
 
-.playlist div:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(60deg);
+.box .list .imgBox img {
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.planet {
-  width: 70vw;
-  height: 70vw;
-  max-width: 600px;
-  max-height: 600px;
-  background-image: url(images/planet2.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: 300ms;
+.box .list .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.box .list .content .rank {
+  position: absolute;
+  right: -50px;
+  color: cadetblue;
+  transition: 0.5s;
+  font-size: 2em;
+}
+
+.box .list .content .rank small {
+  font-weight: 500;
+  opacity: 0.25;
+}
+
+.box .list:hover .content .rank {
+  right: 20px;
+}
+
+.box .list .content h4 {
+  line-height: 1.2em;
+  font-weight: 600;
+  transform: 0.5s;
+}
+
+.box .list .content p {
+  font-size: 0.75em;
+  transform: 0.5s;
+}
+
+.box .list:hover .content h3,
+.box .list:hover .content p {
+  color: #333;
+}
+
+/* Footer styling */
+/* footer {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+} */
